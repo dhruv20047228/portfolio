@@ -5,9 +5,9 @@ const path = require('path');
 
 const app = express();
 
-// 🔁 Live reload setup
+
 const liveReloadServer = livereload.createServer({ port: 35729 });
-liveReloadServer.watch(path.join(__dirname, 'src'));
+liveReloadServer.watch(path.join(__dirname)); 
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
     liveReloadServer.refresh("/");
@@ -15,12 +15,12 @@ liveReloadServer.server.once("connection", () => {
 });
 app.use(connectLiveReload());
 
-// 📂 Serve static files
-app.use(express.static(path.join(__dirname, 'src')));
 
-// ✅ Optional: default fallback (if needed)
+app.use(express.static(__dirname));
+
+
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
