@@ -1,0 +1,88 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1a171d;
+    color: #ff00ff;
+    font-family: "Inconsolata", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+.intro-main h1{
+    text-decoration: underline;
+    font-size: 100px;
+}
+.intro-main h2, .projects h2{
+    color: #ff00ff66;
+}
+
+.container {
+    width: 800px;
+    height: 650px;
+    
+    padding: 100px;
+}
+.skills h1, .projects h1 {
+    text-decoration: underline;
+}
+.skills h2 {
+    color: #ff00ff66;
+}
+a {
+    color: #ff00ff;
+    font-size: 2rem;
+    text-decoration: wavy;
+    color: #ff00ff66;
+    cursor: pointer;
+}
+
+
+.logo {
+    border-radius: 300px;
+    right: 60px;
+    top: 70px;
+    position: absolute;
+    background-color: black;
+    width: 250px;
+    height: 250px;
+    align-items: center
+}
+.logo #logopic {
+    width: 250px;
+    height: 250px;
+    border-radius: 300px;
+    display: flex;
+    box-shadow: 0 0 20px 5px #ff00ff, 0 0 40px 5px #ff00ff66;
+}
+
+
+.horizontal-line,
+.vertical-line {
+    position: absolute;
+    background-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    z-index: 0; 
+}
+
+
+.horizontal-line {
+    top: 195px; /* 70px (top of logo) + 125px (half height) */
+    left: 0;
+    width: calc(100% - 310px); /* 250px logo + 60px right spacing */
+    height: 2px;
+    background-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    position: absolute;
+}
+
+.vertical-line {
+    left: calc(100% - 185px); /* 60px from right + 125px (half width of logo) */
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    position: absolute;
+}
+
