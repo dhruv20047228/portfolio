@@ -8,9 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="horizontal-line"></div>
+  <div class="vertical-line"></div>
   <div class="container">
-    <div class="horizontal-line"></div>
-    <div class="vertical-line"></div>
+    
 
     <div class="intro">
     <div class="intro-main">
@@ -24,11 +25,14 @@
   </div> 
   <div class="skills">
     <h1>Skills:</h1>
-    <h2>HTML, CSS, JavaScript, TypeScript, MongoDB, PostgreSQL,Python</h2>
+    <h2>Python, Scikit Learn, Pytorch, Docker, VectorDB</h2>
   </div>
   <div class="projects">
     <h1>Projects</h1>
     <h2>Netrika AI - Data Labeling Platform for AI</h2>
+  </div>
+  <div class="blogs">
+    <u><a href="https://medium.com/@dhruvvcodess">Blogs</a></u>
   </div>
   <div class="links">
     <h1><u>Say Hello to Me :</u></h1>
@@ -40,5 +44,18 @@
   </div>
   <script src="script.js"></script>
   <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+  <script>
+window.addEventListener('scroll', function() {
+    const horizontalLine = document.querySelector('.horizontal-line');
+    const y = window.scrollY || window.pageYOffset;
+    if (y > 0) {
+        horizontalLine.style.opacity = 0;
+    } else {
+        horizontalLine.style.opacity = 1;
+    }
+});
+</script>
+
+
 </body>
 </html>
